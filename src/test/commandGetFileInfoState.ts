@@ -22,10 +22,7 @@ function getFileInfoState(uri: any) {
 			const size = stats.size;
 			const createTime = stats.birthtime.toLocaleDateString();
 			const modifyTime = stats.mtime.toLocaleTimeString();
-
-			vscode.window.showInformationMessage(`文件大小为${size}字节；
-													  文件创建时间为${createTime}
-													  文件修改时间为${modifyTime}`, { modal: true });
+			vscode.window.showInformationMessage(`文件大小为${size}字节；文件创建时间为${createTime}；文件修改时间为${modifyTime}`, { modal: true });
 		}
 	});
 	const stats = fs.statSync(filePath);
